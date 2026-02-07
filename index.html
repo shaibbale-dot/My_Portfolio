@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laiba Javed | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons for aesthetic -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><span>L</span> Laiba.</div>
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i data-lucide="more-vertical"></i>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+
+
+            </ul>
+        </nav>
+        <a href="#contact" class="contact-btn">Contact Me</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="badge">Hello There!</div>
+            <h1>I'm <span>Laiba Javed</span>,<br>BS IT Student<br>Based in Pakistan.</h1>
+            <p>
+                Motivated IT graduate with strong communication, leadership,
+                and problem-solving skills. Passionate about learning and growth.
+            </p>
+            <div class="hero-btns">
+                <a href="#" class="btn-primary">View My Resume <i data-lucide="play-circle"></i></a>
+                <a href="#" class="btn-secondary">Hire Me</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-bg-circle"></div>
+            <img src="img.png" alt="Laiba Javed">
+            <div class="floating-badge badge-top">Student</div>
+            <div class="floating-badge badge-bottom">IT Graduate</div>
+        </div>
+    </section>
+
+    <!-- Ticker Section -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span class="ticker-item">Microsoft Office <span>*</span></span>
+            <span class="ticker-item">Communication <span>*</span></span>
+            <span class="ticker-item">Problem Solving <span>*</span></span>
+            <span class="ticker-item">Time Management <span>*</span></span>
+            <span class="ticker-item">Teamwork <span>*</span></span>
+            <span class="ticker-item">Documentation <span>*</span></span>
+            <!-- Duplicated for seamless loop -->
+            <span class="ticker-item">Microsoft Office <span>*</span></span>
+            <span class="ticker-item">Communication <span>*</span></span>
+            <span class="ticker-item">Problem Solving <span>*</span></span>
+            <span class="ticker-item">Time Management <span>*</span></span>
+            <span class="ticker-item">Teamwork <span>*</span></span>
+            <span class="ticker-item">Documentation <span>*</span></span>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <div>
+                <p style="color: var(--accent-color); font-weight: 500;">— Skills</p>
+                <h2>Skills I Have</h2>
+            </div>
+            <a href="#" class="view-all">View All Skills <i data-lucide="arrow-right-circle"></i></a>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i data-lucide="layout"></i></div>
+                <h3>Microsoft Office</h3>
+                <p>Expert in Word, Excel & PowerPoint for professional reports and dynamic presentations.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i data-lucide="users"></i></div>
+                <h3>Communication</h3>
+                <p>Strong verbal & written communication skills with experience in project coordination.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i data-lucide="search"></i></div>
+                <h3>Problem Solving</h3>
+                <p>Analyzing complex IT issues and finding practical, efficient technical solutions.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="img 2.png" alt="About Laiba">
+        </div>
+
+        <div class="about-content">
+            <p style="color: var(--accent-color); font-weight: 500;">— About Me</p>
+            <h2>Who is <span>Laiba Javed?</span></h2>
+            <p>
+                I am currently pursuing BS Information Technology (2022–2026)
+                from University of Science and Technology. I have academic
+                experience in teamwork, documentation, and project coordination.
+                Based in Lahore, Pakistan, I am fluent in English & Urdu.
+            </p>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <h4>2026</h4>
+                    <p>Graduation Year</p>
+                </div>
+                <div class="stat-item">
+                    <h4>BS IT</h4>
+                    <p>Current Degree</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Lahore</h4>
+                    <p>Location</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="#" class="btn-primary" style="display: inline-flex; background: var(--accent-color);">Download
+                    CV <i data-lucide="arrow-right-circle"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Laiba Javed | Designed with Excellence</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+
+            // Toggle icon between dots and close
+            const icon = menuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'more-vertical');
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = document.querySelectorAll('#nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuBtn.querySelector('i').setAttribute('data-lucide', 'more-vertical');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+
+</html>
